@@ -33,7 +33,7 @@ const TECHSTACKS = [
   'CSS',
 ];
 const PROFILEPICPATH = 'profile-photo.jpg';
-const CVPATH = 'Ian-Quinto-Resume.pdf';
+const CVPATH = 'ian-quinto-resume-fsd.pdf';
 const SOCIALLINKS = [
   { icon: Github, href: 'https://github.com/codedianq' },
   {
