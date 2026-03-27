@@ -12,6 +12,7 @@ const PROJECTS = [
     androidLink:
       'https://play.google.com/store/search?q=magcoop%20online&c=apps&hl=en',
     iosLink: 'https://apps.apple.com/ph/app/magcoop-online/id6757223527',
+    webLink: '',
   },
   {
     title: 'Isuzu Inventory System',
@@ -22,6 +23,7 @@ const PROJECTS = [
     deployed: false,
     androidLink: '',
     iosLink: '',
+    webLink: '',
   },
   {
     title: 'GIGS.PH',
@@ -36,9 +38,9 @@ const PROJECTS = [
       'SQLServer',
       'Figma',
     ],
-    deployed: false,
-    androidLink: '',
-    iosLink: '',
+    deployed: true,
+    iosLink: 'https://apps.apple.com/ph/app/gigs-philippines/id6749216275',
+    webLink: 'https://book.gigsph.com/',
   },
   {
     title: 'VSTR',
@@ -56,6 +58,7 @@ const PROJECTS = [
     deployed: false,
     androidLink: '',
     iosLink: '',
+    webLink: '',
   },
 ];
 
@@ -103,23 +106,38 @@ export const Projects = () => {
                 {/* Overlay Links */}
                 {project.deployed && (
                   <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <a
-                      href={project.androidLink}
-                      target="_blank"
-                      className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all">
-                      <i
-                        className="lab la-android"
-                        style={{ fontSize: '30px' }}></i>
-                    </a>
+                    {project.androidLink && (
+                      <a
+                        href={project.androidLink}
+                        target="_blank"
+                        className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all">
+                        <i
+                          className="lab la-android"
+                          style={{ fontSize: '30px' }}></i>
+                      </a>
+                    )}
 
-                    <a
-                      href={project.iosLink}
-                      target="_blank"
-                      className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all">
-                      <i
-                        className="lab la-apple"
-                        style={{ fontSize: '30px' }}></i>
-                    </a>
+                    {project.iosLink && (
+                      <a
+                        href={project.iosLink}
+                        target="_blank"
+                        className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all">
+                        <i
+                          className="lab la-apple"
+                          style={{ fontSize: '30px' }}></i>
+                      </a>
+                    )}
+
+                    {project.webLink && (
+                      <a
+                        href={project.webLink}
+                        target="_blank"
+                        className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all">
+                        <i
+                          className="lab la-chrome"
+                          style={{ fontSize: '30px' }}></i>
+                      </a>
+                    )}
                   </div>
                 )}
               </div>
